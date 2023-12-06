@@ -4,25 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task App Browser</title>
+    <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
       <header>
-        <h1>Lista degli appuntamenti</h1>
+        <h1>Lista degli Impegni</h1>
         <form id="input">
           <div id="first">
-            <label for="taskName">Inserisci il task qui</label>
+            <label for="taskName">Inserisci l'impegno qui</label>
             <input
               id="taskName"
               placeholder="es. Porta a spasso il cane"
+              maxlength="50"
               required
             />
+            <button id="print"><i class="fas fa-pencil-alt"></i></button>
           </div>
-          <button>TASK SAVE</button>
         </form>
       </header>
-      <section id="taskList"></section>
+      <div id="list">
+        <h3>Lista Impegni</h3>
+        <ul id="taskList"></ul>
+      </div>
     </main>
     <script src="./js1.js"></script>
   </body>
